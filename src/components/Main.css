@@ -9,10 +9,6 @@
 	--headerTextColor: #fff;
 }
 
-body {
-	font-family: 'Josefin Sans', sans-serif;
-}
-
 .navigation {
 	display: flex;
 	flex-direction: column;
@@ -27,6 +23,7 @@ body {
 	padding: 30px;
 	color: var(--headerTextColor);
 	background: var(--headerBackgroundColor);
+	position: fixed;
 }
 
 .navigation nav ul {
@@ -40,3 +37,37 @@ body {
 	display: flex;
 	list-style: none;
 }
+
+/* vote component style */
+
+.cats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 50px;
+	padding: 70px 0px;
+}
+
+.cats img {
+	max-width: 400px;
+	max-height: 400px;
+	display: flex;
+}
+
+.cats button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	padding: 20px;
+	width: 20%;
+	outline: none;
+	border: none;
+	text-transform: uppercase;
+	background: rgb(87, 228, 174);
+	cursor: pointer;
+	font-weight: 600;
+}
+/* end of vote component style */

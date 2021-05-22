@@ -1,0 +1,11 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow-x: hidden;
+	align-items: center;
+	justify-content: center;
+}
