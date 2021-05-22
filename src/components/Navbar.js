@@ -1,27 +1,45 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import { Vote, Breeds, Search, Favourites, Upload } from './index';
+import './Main.css';
+
+const linkStyles = {
+	color: '#fff',
+	textDecoration: 'none',
+	textTransform: 'uppercase',
+	fontSize: '.9rem',
+};
 
 function Navbar() {
 	return (
 		<Router>
-			<div>
+			<div className="navigation">
 				<nav>
 					<ul>
 						<li>
-							<Link to="/">Vote</Link>
+							<Link to="/" style={linkStyles}>
+								Vote
+							</Link>
 						</li>
 						<li>
-							<Link to="/breeds">Breeds</Link>
+							<Link to="/breeds" style={linkStyles}>
+								Breeds
+							</Link>
 						</li>
 						<li>
-							<Link to="/search">Search</Link>
+							<Link to="/search" style={linkStyles}>
+								Search
+							</Link>
 						</li>
 						<li>
-							<Link to="/favourites">Favourites</Link>
+							<Link to="/favourites" style={linkStyles}>
+								Favourites
+							</Link>
 						</li>
 						<li>
-							<Link to="/upload">Upload</Link>
+							<Link to="/upload" style={linkStyles}>
+								Upload
+							</Link>
 						</li>
 					</ul>
 				</nav>

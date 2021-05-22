@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--headerBackgroundColor: #000;
+	--headerTextColor: #fff;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.navigation nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	color: var(--headerTextColor);
+	background: var(--headerBackgroundColor);
+}
+
+.navigation nav ul {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	align-items: center;
+}
+
+.navigation nav ul li {
+	display: flex;
+	list-style: none;
+}
