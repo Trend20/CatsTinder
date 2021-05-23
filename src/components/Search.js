@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { api_key } from '../api';
 
 import './Main.css';
 
-const apiKey = '73eedd65-45da-425d-849f-f79256229f3e';
+const apiKey = api_key;
 const apiURL = 'https://api.thecatapi.com/v1/images/search?limit=100&page=100&order=DESC';
 
 function Search() {

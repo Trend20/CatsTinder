@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { api_key } from '../api';
 
 // component styles
 import './Main.css';
 
-const apiKey = '73eedd65-45da-425d-849f-f79256229f3e';
+const apiKey = api_key;
 const myURL = 'https://api.thecatapi.com/v1/images/search';
 
 function Vote() {
