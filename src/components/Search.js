@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaHeart } from 'react-icons/fa';
 
 import './Main.css';
 
@@ -21,7 +22,6 @@ function Search() {
 			.then((response) => response.json())
 			.then((catImages) => {
 				setCatImages(catImages);
-				console.log(catImages);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -32,7 +32,10 @@ function Search() {
 			{catImages.map((image) => {
 				return (
 					<div className="image-container" style={containerStyle}>
-						<img src={image.url} alt="" style={imgStyle} />
+						<img src={image.url} key={image.id} style={imgStyle} />
+						<button style={btnStyle}>
+							<FaHeart />
+						</button>
 					</div>
 				);
 			})}
@@ -50,8 +53,8 @@ const imagesStyles = {
 };
 
 const containerStyle = {
-	display: 'grid',
-	gridTemplateColumns: 'repeat(4, 2fr)',
+	display: 'flex',
+	flexDirection: 'column',
 	width: '100%',
 };
 
@@ -60,6 +63,14 @@ const imgStyle = {
 	gridTemplateColumns: 'repeat(4, 1fr)',
 	maxWidth: '300px',
 	maxHeight: '400px',
+};
+
+const btnStyle = {
+	padding: '20px',
+	outline: 'none',
+	cursor: 'pointer',
+	fontSize: '1.5rem',
+	visibility: 'hidden',
 };
 
 export default Search;
