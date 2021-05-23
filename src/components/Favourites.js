@@ -28,7 +28,7 @@ class Favourites extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="favourites">
 				{this.state.catFavourite.map((cat) => {
 					return (
 						<ul>
@@ -40,6 +40,11 @@ class Favourites extends Component {
 		);
 	}
 }
+
+const favouritesStyle = {
+	display: 'grid',
+	padding: '70px 20px',
+};
 
 export default Favourites;
 

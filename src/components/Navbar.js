@@ -27,7 +27,7 @@ function Navbar() {
 							</Link>
 						</li>
 						<li>
-							<Link to="/search" style={linkStyles}>
+							<Link to="/images" style={linkStyles}>
 								Images
 							</Link>
 						</li>
@@ -52,7 +52,7 @@ function Navbar() {
 					<Route path="/breeds">
 						<Breeds />
 					</Route>
-					<Route path="/search">
+					<Route path="/images">
 						<Search />
 					</Route>
 					<Route path="/favourites">
