@@ -54,6 +54,7 @@
 	max-width: 400px;
 	max-height: 400px;
 	display: flex;
+	margin-top: 30px;
 }
 
 .cats button {
@@ -69,6 +70,31 @@
 	background: rgb(87, 228, 174);
 	cursor: pointer;
 	font-weight: 600;
+}
+
+.action {
+	display: flex;
+	justify-content: space-between;
+	width: 20%;
+	align-items: center;
+}
+
+.action button {
+	display: flex;
+	width: 40%;
+	outline: none;
+	border-radius: 5px;
+	align-items: center;
+	font-size: 1rem;
+	color: rgb(39, 38, 38);
+}
+
+#like {
+	background: #7fb0e7;
+}
+
+#dislike {
+	background: #e26965;
 }
 /* end of vote component style */
 

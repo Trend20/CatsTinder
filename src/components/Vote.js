@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api_key } from '../api';
+import { AiFillLike, AiFillDislike } from 'react-icons/ai';
 
 // component styles
 import './Main.css';
@@ -35,6 +36,20 @@ function Vote() {
 	};
 	return (
 		<div className="cats">
+			<div className="action">
+				<button id="like">
+					<i>
+						<AiFillLike />
+					</i>
+					Like
+				</button>
+				<button id="dislike">
+					<i>
+						<AiFillDislike />
+					</i>
+					Dislike
+				</button>
+			</div>
 			<img src={catAvatar} />
 			<button onClick={getRandomcat}>next</button>
 		</div>
