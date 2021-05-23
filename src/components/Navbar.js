@@ -28,7 +28,7 @@ function Navbar() {
 						</li>
 						<li>
 							<Link to="/search" style={linkStyles}>
-								Search
+								Images
 							</Link>
 						</li>
 						<li>
