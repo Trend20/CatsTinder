@@ -35,7 +35,7 @@ function Upload() {
 			});
 	};
 	return (
-		<div style={uploadStyles} className="container">
+		<div className="container">
 			<p>Select Cat Picture</p>
 			<div className="upload">
 				<input type="file" name="file" onChange={handleInputChange} />
@@ -57,16 +57,16 @@ function Upload() {
 	);
 }
 
-const uploadStyles = {
-	display: 'flex',
-	flexDirection: 'column',
-	justifyContent: 'center',
-	alignItems: 'center',
-	padding: '100px 20px',
-	width: '40%',
-	margin: 'auto',
-	border: '1px solid #000',
-	marginTop: '120px',
-	maxHeight: '400px',
-};
+// const uploadStyles = {
+// 	display: 'flex',
+// 	flexDirection: 'column',
+// 	justifyContent: 'center',
+// 	alignItems: 'center',
+// 	padding: '100px 20px',
+// 	width: '40%',
+// 	margin: 'auto',
+// 	border: '1px solid #000',
+// 	marginTop: '120px',
+// 	maxHeight: '400px',
+// };
 export default Upload;
