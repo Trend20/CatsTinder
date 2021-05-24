@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-const apiKey = '73eedd65-45da-425d-849f-f79256229f3e';
-const apiURL = `https://api.thecatapi.com/v1/favourites?api_key=${apiKey}`;
+const apiURL = 'https://api.thecatapi.com/v1/favourites';
 
 class Favourites extends Component {
 	constructor(props) {
@@ -13,13 +12,17 @@ class Favourites extends Component {
 	}
 
 	componentDidMount() {
-		fetch(apiURL)
+		fetch(apiURL, {
+			headers: {
+				'x-api-key': '73eedd65-45da-425d-849f-f79256229f3e',
+			},
+		})
 			.then((res) => res.json())
 			.then((data) => {
 				this.setState({
 					catFavourite: data,
 				});
-				console.log(this.state.catFavourite);
+				console.log(data);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -27,17 +30,7 @@ class Favourites extends Component {
 	}
 
 	render() {
-		return (
-			<div className="favourites">
-				{this.state.catFavourite.map((cat) => {
-					return (
-						<ul>
-							<li key={cat.id}>{cat.image.url}</li>
-						</ul>
-					);
-				})}
-			</div>
-		);
+		return <div className="favourites"></div>;
 	}
 }
 

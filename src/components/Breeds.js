@@ -34,6 +34,7 @@ function Breeds() {
 				return (
 					<a key={breed.id} href={breed.cfa_url}>
 						<div className="breed-container">
+							<p>{breed.origin}</p>
 							<h3>{breed.name}</h3>
 							<h6>id:{breed.id}</h6>
 							<p>{breed.description}</p>

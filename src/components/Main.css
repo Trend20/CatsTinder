@@ -38,6 +38,37 @@
 	list-style: none;
 }
 
+@media screen and (max-width: 768px) {
+	.navigation {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.navigation nav {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 10px;
+		color: var(--headerTextColor);
+		background: var(--headerBackgroundColor);
+		position: fixed;
+	}
+
+	.navigation nav ul {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
+
+	.navigation nav ul li {
+		display: flex;
+		list-style: none;
+	}
+}
+
 /* vote component style */
 
 .cats {
@@ -125,8 +156,42 @@
 
 .breed-container p {
 	font-size: 0.9rem;
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.breeds {
+		display: grid;
+		grid-template-columns: repeat(1, 2fr);
+		margin-top: 50px;
+		padding: 70px 20px;
+		width: 100%;
+		grid-gap: 20px;
+	}
+
+	.breed-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin-top: 30px;
+		width: 100%;
+	}
+
+	.breed-container p {
+		font-size: 0.9rem;
+		margin-top: 10px;
+	}
 }
 /* end of breeds component styles */
+
+@media screen and (max-width: 768px) {
+	.images {
+		display: grid;
+		grid-template-columns: repeat(1, 2fr);
+	}
+}
 
 .upload {
 	display: flex;
