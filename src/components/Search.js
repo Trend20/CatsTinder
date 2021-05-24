@@ -9,7 +9,6 @@ const apiURL = 'https://api.thecatapi.com/v1/images/search?limit=100&page=100&or
 
 function Search() {
 	const [catImages, setCatImages] = useState([]);
-
 	useEffect(() => {
 		getCatImages();
 	}, []);
@@ -35,7 +34,9 @@ function Search() {
 					<div className="image-container" style={containerStyle}>
 						<img src={image.url} key={image.id} style={imgStyle} />
 						<button style={btnStyle}>
-							<FaHeart />
+							<i style={iconStyle}>
+								<FaHeart />
+							</i>
 						</button>
 					</div>
 				);
@@ -71,7 +72,11 @@ const btnStyle = {
 	outline: 'none',
 	cursor: 'pointer',
 	fontSize: '1.5rem',
-	visibility: 'hidden',
+	border: 'none',
+};
+
+const iconStyle = {
+	color: 'red',
 };
 
 export default Search;
